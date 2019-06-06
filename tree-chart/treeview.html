@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="https://demos.telerik.com/kendo-ui/treeview/images">
+    <style>html { font-size: 14px; font-family: Arial, Helvetica, sans-serif; }</style>
+    <title></title>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.514/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.514/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.514/styles/kendo.material.mobile.min.css" />
+    <script src="https://kendo.cdn.telerik.com/2019.2.514/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.2.514/js/kendo.all.min.js"></script>
+
+</head>
+<body>
+        <div id="example">
+            <div class="demo-section k-content">
+                <h4>TreeView with images</h4>
+                <div id="treeview-images"></div>
+            </div>
+            <script>
+                $("#treeview-images").kendoTreeView({
+                    dataTextField: [ "society" ,"flat","family","phone"],
+
+                    //template: "<span style='color: #= item.owner #'>#= item.item.owner # color:#: item.owner #</span>",
+                    dataSource: [
+                        {
+                            society: "SmarterHomes", imageUrl: "../content/web/treeview/mail.png",
+                            items: [
+                                { flat: "101", imageUrl: "../content/web/treeview/readmail.png",
+                                items: [
+                                    {family: "Sandeep", imageUrl: "../content/web/treeview/readmail.png",items:
+                                    [
+                                        {phone:"9811391432"},
+                                        {email:"savd.com"}
+
+                                    ]
+
+
+                                },
+                                    {family: "Anil", imageUrl: "../content/web/treeview/readmail.png"},
+                                    {family: "Het", imageUrl: "../content/web/treeview/readmail.png"}
+                                ]
+                                },
+                                { flat: "102", imageUrl: "../content/web/treeview/readmail.png",
+                                items: [
+                                    {family: "Sateesh", imageUrl: "../content/web/treeview/readmail.png"},
+                                    {family: "Puneet", imageUrl: "../content/web/treeview/readmail.png"}
+                                ]
+                             },
+                                { flat: "103", imageUrl: "../content/web/treeview/readmail.png" },
+                                { flat: "104", imageUrl: "../content/web/treeview/readmail.png" }
+
+                            ]
+                        }
+                    ]
+                });
+            </script>
+
+
+
+
+            <style>
+
+                .rootfolder { background-position: 0 0; }
+                .folder { background-position: 0 -16px; }
+                .pdf { background-position: 0 -32px; }
+                .html { background-position: 0 -48px; }
+                .image { background-position: 0 -64px; }
+            </style>
+        </div>
+
+
+</body>
+</html>
